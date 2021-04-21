@@ -20,4 +20,32 @@ window.onload = function () {
 
         }
     }
+    pascal();
+
+}
+var faktorialis = function (n) {
+    let eredmeny = 1;
+    for (let i = 2; i < n; i++) {
+        eredmeny = eredmeny * i;
+    }
+    return eredmeny;
+}
+
+function pascal() {
+    console.log("betöltődött");
+    let hova2 = document.getElementById("pascal");
+    for (var s = 0; s < 10; s++) {
+        let sor2 = document.createElement("div");
+        sor2.classList.add("sor2");
+        hova2.appendChild(sor2);
+
+        for (var o = 0;  o < s; o++) {
+            let szam2 = document.createElement("div");
+            sor2.appendChild(szam2);
+            szam2.classList.add("elem2");
+            szam2.style.top = s * 30;
+            szam2.style.left = o * 30;
+            szam2.innerText = faktorialis(s) / (faktorialis(o) * faktorialis(s - o));
+        }
+    }
 }
