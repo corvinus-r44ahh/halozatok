@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < questionsInHotList; i++) {
             kérdésBetöltés(nextQuestion, i);
             nextQuestion++;
-        }
+       }
     } else {
         kérdésMegjelenítés();
     }
